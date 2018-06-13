@@ -23,6 +23,14 @@ public class StandardDaoJdbcImpl {
 	private static final String DB_URL = "jdbc:mysql://" + DB_HOST + ":" + DB_PORT + "/jbossews";
 	private static final String DB_USERNAME = "adminSvb4x5j";
 	private static final String DB_PASSWORD = "ZCrrXCB652HH";
+	
+	private static final String HOST = "jws-app-mysql";
+	private static final String DB_NAME = "lllc";
+	private static final int PORT = 3306;
+	private static final String MYSQL_DB_URL = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DB_NAME;
+	private static final String USER = "user";
+	private static final String PASSWORD = "password";
+	private static final String DRIVER = "com.mysql.jdbc.Driver";
 
 	public <R> List<R> queryForListBySqlStmt(String sqlStmt, RowMapper<R> rowMapper) {
 		
