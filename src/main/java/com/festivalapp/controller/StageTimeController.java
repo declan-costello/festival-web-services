@@ -30,7 +30,9 @@ public class StageTimeController {
 	@RequestMapping(URL_GET_STAGE_TIMES)
 	public Object getAllStageTimes() {
 		Map<String,Object> resultsMap = new HashMap<String, Object>();
-		List<StageTime> stageTimes = getStageTimes();
+		List<StageTime> stageTimes = new ArrayList<StageTime>();
+		stageTimes = getStageTimes();
+		//List<StageTime> stageTimes = getStageTimes();
 		resultsMap.put("data", stageTimes);
 		return resultsMap;
 	}
