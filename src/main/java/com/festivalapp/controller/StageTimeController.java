@@ -33,8 +33,10 @@ public class StageTimeController {
 		Map<String,Object> resultsMap = new HashMap<String, Object>();
 		try {
 			stageTimes = getStageTimes();
+			System.err.print(stageTimes.size());
 			//List<StageTime> stageTimes = getStageTimes();
 			resultsMap.put("data", stageTimes);
+			//resultsMap.put("data", null);
 			return resultsMap;
 		} finally {
 			stageTimes.clear();
