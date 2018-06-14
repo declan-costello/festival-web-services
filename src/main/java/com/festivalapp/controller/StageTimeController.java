@@ -21,7 +21,7 @@ import com.festivalapp.service.festivalservices.FestivalServicesImpl;
 @RestController
 public class StageTimeController {
 	
-	private static final String URL_GET_STAGE_TIMES = "/getAllStageTimes";
+	private static final String URL_GET_STAGE_TIMES = "/getStageTimes";
 	private static final String URL_GET_USERS = "/getUserInfo";
 	private static final String URL_GET_USER_SCHEDULES = "/getUserScheduleInfo";
 	
