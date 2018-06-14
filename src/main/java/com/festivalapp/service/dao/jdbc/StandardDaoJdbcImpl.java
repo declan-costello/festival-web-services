@@ -18,11 +18,11 @@ public class StandardDaoJdbcImpl {
 //	String dbPassword = "password";
 	
 	// Openshift db settings
-	private static final String DB_HOST = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
-	private static final String DB_PORT = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
-	private static final String DB_URL = "jdbc:mysql://" + DB_HOST + ":" + DB_PORT + "/jbossews";
-	private static final String DB_USERNAME = "adminSvb4x5j";
-	private static final String DB_PASSWORD = "ZCrrXCB652HH";
+//	private static final String DB_HOST = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
+//	private static final String DB_PORT = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
+//	private static final String DB_URL = "jdbc:mysql://" + DB_HOST + ":" + DB_PORT + "/jbossews";
+//	private static final String DB_USERNAME = "adminSvb4x5j";
+//	private static final String DB_PASSWORD = "ZCrrXCB652HH";
 	
 	private static final String HOST = "jws-app-mysql";
 	private static final String DB_NAME = "lllc";
@@ -48,7 +48,7 @@ public class StandardDaoJdbcImpl {
 
 		// Connect to the db		
 		try {
-			conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+			conn = DriverManager.getConnection(MYSQL_DB_URL, USER, PASSWORD);
 		} catch (SQLException e) {
 			System.out.println("Error connecting to database");
 			e.printStackTrace();
