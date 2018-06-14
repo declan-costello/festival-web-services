@@ -66,11 +66,19 @@ public class StageTimeController {
 		//String dbPassword = "password";
 		
 		// Openshift db settings
-		String dbHost = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
-		String dbPort = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
-		String dbUrl = "jdbc:mysql://" + dbHost + ":" + dbPort + "/jbossews";
-		String dbUsername = "adminSvb4x5j";
-		String dbPassword = "ZCrrXCB652HH";
+		//String dbHost = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
+		//String dbPort = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
+		//String dbUrl = "jdbc:mysql://" + dbHost + ":" + dbPort + "/jbossews";
+		//String dbUsername = "adminSvb4x5j";
+		//String dbPassword = "ZCrrXCB652HH";
+		
+		String dbHost = "jws-app-mysql";
+	    String DB_NAME = "lllc";
+	    String dbPort = "3306";
+	    String dbUrl = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + DB_NAME;
+	    String dbUsername = "user";
+	    String dbPassword = "password";
+	    String DRIVER = "com.mysql.jdbc.Driver";
 		
 		String getAllStageTimesQuery = "SELECT * FROM STAGE_TIMES";
 		
