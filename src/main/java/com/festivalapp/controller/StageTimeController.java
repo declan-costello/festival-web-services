@@ -29,12 +29,16 @@ public class StageTimeController {
 
 	@RequestMapping(URL_GET_STAGE_TIMES)
 	public Object getAllStageTimes() {
-		Map<String,Object> resultsMap = new HashMap<String, Object>();
 		List<StageTime> stageTimes = new ArrayList<StageTime>();
-		stageTimes = getStageTimes();
-		//List<StageTime> stageTimes = getStageTimes();
-		resultsMap.put("data", stageTimes);
-		return resultsMap;
+		try {
+			Map<String,Object> resultsMap = new HashMap<String, Object>();
+			stageTimes = getStageTimes();
+			//List<StageTime> stageTimes = getStageTimes();
+			resultsMap.put("data", stageTimes);
+			return resultsMap;
+		} finally {
+			stageTimes.clear();
+		}		
 	}
 	
 //	@RequestMapping(URL_GET_STAGE_TIMES)
